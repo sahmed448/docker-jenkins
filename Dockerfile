@@ -11,3 +11,6 @@ RUN yum -y install epel-release && \
     pip3 install awscli
 
 CMD /usr/sbin/sshd -D
+
+ENTRYPOINT ["tail"]
+CMD ["-f","/dev/null"]
